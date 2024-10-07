@@ -16,14 +16,18 @@ const btsheet = {
     closeButton.innerHTML = '&times;';
     header.appendChild(closeButton);
 
+    // Create content wrapper (for custom background)
+    const contentWrapper = document.createElement('div');
+    contentWrapper.className = 'btsheet-content-wrapper';
+
     // Create content area
     const content = document.createElement('div');
     content.className = 'btsheet-sheet-content';
 
     // Apply custom body styles (if provided)
     if (options.btBody) {
+      contentWrapper.style.backgroundColor = options.btBody.backgroundColor || "rgba(255, 255, 255, 0.9)"; // Apply background to content wrapper
       content.style.color = options.btBody.textColor || "#000"; // Default text color
-      content.style.backgroundColor = options.btBody.backgroundColor || "rgba(255, 255, 255, 0.9)"; // Default background color
     }
 
     // Image (if provided)
@@ -58,9 +62,10 @@ const btsheet = {
     button.style.color = options.button?.textColor || '#fff';
     content.appendChild(button);
 
-    // Append header and content to the sheet
+    // Append content to wrapper and then to the sheet
+    contentWrapper.appendChild(content);
     sheet.appendChild(header);
-    sheet.appendChild(content);
+    sheet.appendChild(contentWrapper);
 
     // Append overlay and sheet to body
     document.body.appendChild(overlay);

@@ -1,20 +1,9 @@
-/* Add a background overlay that covers the entire viewport */
-.btsheet-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
-  z-index: 999; /* Make sure it’s behind the bottom sheet */
-}
-
 .btsheet-bottom-sheet {
   position: fixed;
   bottom: -100%;
   left: 0;
   right: 0;
-  background: rgba(255, 255, 255, 0.9); /* Adjust background */
+  background: rgba(255, 255, 255, 0.9); /* Default background for outer sheet */
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
   transition: bottom 0.3s ease-in-out;
@@ -40,9 +29,13 @@
   color: #fff;
 }
 
+.btsheet-content-wrapper {
+  padding: 10px;
+  border-radius: 10px; /* To give a rounded look to the inner content */
+}
+
 .btsheet-sheet-content {
   text-align: center;
-  padding: 10px;
 }
 
 .btsheet-sheet-content img {
