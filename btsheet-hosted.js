@@ -1,26 +1,20 @@
 const btsheet = {
   hosted: function(options = {}) {
-    // Create bottom sheet container dynamically
+    // Create bottom sheet container dynamically with unique class
     const sheet = document.createElement('div');
-    sheet.className = 'bottom-sheet';
+    sheet.className = 'btsheet-bottom-sheet';
     
     // Create sheet header with close button
     const header = document.createElement('div');
-    header.className = 'sheet-header';
+    header.className = 'btsheet-sheet-header';
     const closeButton = document.createElement('span');
-    closeButton.className = 'close-btn';
+    closeButton.className = 'btsheet-close-btn';
     closeButton.innerHTML = '&times;';
     header.appendChild(closeButton);
     
     // Create content area
     const content = document.createElement('div');
-    content.className = 'sheet-content';
-    
-    // Apply body customization
-    if (options.body) {
-      content.style.color = options.body.textColor || "#000";
-      content.style.backgroundColor = options.body.backgroundColor || "rgba(255, 255, 255, 0.9)";
-    }
+    content.className = 'btsheet-sheet-content';
     
     // Image (if provided)
     if (options.imageUrl) {
@@ -103,7 +97,7 @@ const btsheet = {
         sheet.style.backgroundColor = 'rgba(255, 255, 255, 0.1)'; // Transparent background
         sheet.style.backdropFilter = 'blur(10px)';
         if (bodyBackgroundColor) {
-          sheet.querySelector('.sheet-content').style.backgroundColor = bodyBackgroundColor;
+          sheet.querySelector('.btsheet-sheet-content').style.backgroundColor = bodyBackgroundColor;
         }
         break;
       case 'blur':
