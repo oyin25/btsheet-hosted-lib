@@ -8,6 +8,21 @@ const btsheet = {
     const sheet = document.createElement('div');
     sheet.className = 'btsheet-bottom-sheet';
 
+    // Apply custom body styles to the outer sheet (if provided)
+    if (options.btBody) {
+      sheet.style.backgroundColor = options.btBody.backgroundColor || "rgba(255, 255, 255, 0.9)"; // Apply background to entire sheet
+      sheet.style.color = options.btBody.textColor || "#000"; // Apply text color to entire sheet
+
+      // Apply glass effect if enabled
+      if (options.btBody.glassEffect) {
+        sheet.style.backgroundColor = options.btBody.backgroundColor || "rgba(255, 255, 255, 0.1)";
+        sheet.style.backdropFilter = 'blur(10px)';  // Add glass blur effect
+        sheet.style.border = "1px solid rgba(255, 255, 255, 0.18)";
+      } else {
+        sheet.style.backdropFilter = 'none';  // No blur if glassEffect is not enabled
+      }
+    }
+
     // Create sheet header with close button
     const header = document.createElement('div');
     header.className = 'btsheet-sheet-header';
@@ -16,19 +31,13 @@ const btsheet = {
     closeButton.innerHTML = '&times;';
     header.appendChild(closeButton);
 
-    // Create content wrapper (for custom background)
+    // Create content wrapper (for content inside the sheet)
     const contentWrapper = document.createElement('div');
     contentWrapper.className = 'btsheet-content-wrapper';
 
     // Create content area
     const content = document.createElement('div');
     content.className = 'btsheet-sheet-content';
-
-    // Apply custom body styles (if provided)
-    if (options.btBody) {
-      contentWrapper.style.backgroundColor = options.btBody.backgroundColor || "rgba(255, 255, 255, 0.9)"; // Apply background to content wrapper
-      content.style.color = options.btBody.textColor || "#000"; // Default text color
-    }
 
     // Image (if provided)
     if (options.imageUrl) {
@@ -44,7 +53,7 @@ const btsheet = {
     if (options.title) {
       const title = document.createElement('h2');
       title.innerText = options.title;
-      title.style.color = options.btBody?.titleColor || "#000"; // Apply custom title color
+      title.style.color = options.btBody?.titleColor || options.btBody?.textColor || "#000"; // Apply custom title color or text color
       content.appendChild(title);
     }
 
