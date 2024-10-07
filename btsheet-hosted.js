@@ -1,5 +1,5 @@
 const btsheet = {
-  hosted: function (options = {}) {
+  hosted: function(options = {}) {
     // Create overlay dynamically
     const overlay = document.createElement('div');
     overlay.className = 'btsheet-overlay';
@@ -20,6 +20,12 @@ const btsheet = {
     const content = document.createElement('div');
     content.className = 'btsheet-sheet-content';
 
+    // Apply custom body styles (if provided)
+    if (options.btBody) {
+      content.style.color = options.btBody.textColor || "#000"; // Default text color
+      content.style.backgroundColor = options.btBody.backgroundColor || "rgba(255, 255, 255, 0.9)"; // Default background color
+    }
+
     // Image (if provided)
     if (options.imageUrl) {
       const image = document.createElement('img');
@@ -34,6 +40,7 @@ const btsheet = {
     if (options.title) {
       const title = document.createElement('h2');
       title.innerText = options.title;
+      title.style.color = options.btBody?.titleColor || "#000"; // Apply custom title color
       content.appendChild(title);
     }
 
@@ -66,7 +73,7 @@ const btsheet = {
 
     // Close on click outside (if allowed)
     if (options.outsideTouch) {
-      overlay.addEventListener('click', function () {
+      overlay.addEventListener('click', function() {
         closeSheet();
       });
     }
