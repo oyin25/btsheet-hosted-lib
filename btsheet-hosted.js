@@ -16,6 +16,12 @@ const btsheet = {
     const content = document.createElement('div');
     content.className = 'sheet-content';
     
+    // Apply body customization
+    if (options.body) {
+      content.style.color = options.body.textColor || "#000";
+      content.style.backgroundColor = options.body.backgroundColor || "rgba(255, 255, 255, 0.9)";
+    }
+    
     // Image (if provided)
     if (options.imageUrl) {
       const image = document.createElement('img');
@@ -30,6 +36,7 @@ const btsheet = {
     if (options.title) {
       const title = document.createElement('h2');
       title.innerText = options.title;
+      title.style.color = options.body?.titleColor || "#000"; // Apply custom title color
       content.appendChild(title);
     }
     
@@ -53,17 +60,16 @@ const btsheet = {
     document.body.appendChild(sheet);
     
     // Apply custom styles (optional)
-    sheet.style.backgroundColor = options.backgroundColor || 'rgba(255, 255, 255, 0.9)';
     sheet.style.color = options.color || '#000';
     
     // Show the sheet
     setTimeout(() => {
       sheet.classList.add('show');
     }, 100);
-
+    
     // Apply effect based on options
     if (options.effect && options.effect.type) {
-      this.applyEffect(sheet, options.effect.type);
+      this.applyEffect(sheet, options.effect.type, options.body?.backgroundColor);
     }
 
     // Close on click outside (if allowed)
@@ -90,12 +96,15 @@ const btsheet = {
       if (options.onClose) options.onClose();
     }
   },
-  
-  applyEffect: function(sheet, effectType) {
-    switch(effectType) {
+
+  applyEffect: function(sheet, effectType, bodyBackgroundColor) {
+    switch (effectType) {
       case 'glass':
-        sheet.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+        sheet.style.backgroundColor = 'rgba(255, 255, 255, 0.1)'; // Transparent background
         sheet.style.backdropFilter = 'blur(10px)';
+        if (bodyBackgroundColor) {
+          sheet.querySelector('.sheet-content').style.backgroundColor = bodyBackgroundColor;
+        }
         break;
       case 'blur':
         sheet.style.backgroundColor = 'rgba(255, 255, 255, 0.8)';
@@ -109,8 +118,9 @@ const btsheet = {
         }, 100);
         break;
       default:
-        // Default effect
-        sheet.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
+        // Default effect - No glass effect, plain background
+        sheet.style.backgroundColor = bodyBackgroundColor || 'rgba(255, 255, 255, 0.9)';
+        sheet.style.backdropFilter = 'none';
         break;
     }
   }
