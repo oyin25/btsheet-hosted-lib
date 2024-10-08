@@ -92,6 +92,7 @@
         <img class="slide" src="./two.jpg" alt="Screenshot 2">
         <img class="slide" src="./three.jpg" alt="Screenshot 3">
         <img class="slide" src="./four.png" alt="Screenshot 4">
+        <img class="slide" src="./five.jpg" alt="Screenshot 5">
       </div>
       <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
       <button class="next" onclick="plusSlides(1)">&#10095;</button>
@@ -150,6 +151,8 @@
         </li>
         <li><strong>btDim</strong> (string): Dims the background with a percentage (e.g., '60%').</li>
         <li><strong>outsideTouch</strong> (boolean): Closes the sheet when clicked outside if true.</li>
+        <li><strong>btInteract</strong> (boolean): Disable the interaction on the webpage when btshet is opened if false.</li>
+        <li><strong>btsheet.closed();</strong> It use to close the btsheet programatically.</li>
       </ul>
     </div>
   </section>
@@ -196,6 +199,84 @@
   btDim: "70%"
 });
 </code><button class="copy-btn" onclick="copyCode(this)">Copy</button></pre>
+
+
+
+
+
+<h3>Example 3: Use Complex with HTML Tags</h3>
+      <pre><code class="language-javascript">btsheet.hosted({
+        title: "Form Example",
+        text: 
+          <h1>Fill the Form</h1>
+          <input type="text" id="username" placeholder="Enter username">
+          <input type="email" id="email" placeholder="Enter email">
+        ,
+        buttonText: "Submit",
+        btButton: function() {
+          const username = document.getElementById('username').value;
+          const email = document.getElementById('email').value;
+          if (username && email) {
+            btsheet.closed();
+            alert(Username: ${username}, Email: ${email});
+          } else {
+            alert('Please enter both username and email.');
+          }
+        },
+        btInteract: false,  // Disables interaction with the webpage
+        btDim: "50%",
+        onClose: function() {
+          console.log("Bottom sheet closed via X button");
+        },
+        outsideTouch: true
+      });
+      
+
+
+</code><button class="copy-btn" onclick="copyCode(this)">Copy</button></pre>
+      <h3>Example 4: Light Complex Custom Button Styles</h3>
+      <pre><code class="language-javascript">btsheet.hosted({
+        title: "Multitap!",
+        text: "Increase amount of TAP you can earn per one tap. +1 per tap for each level.",
+        buttonText: "Get it!",
+        button: {
+          color: "#ff4757",    // Button background color
+          textColor: "#fff",   // Button text color
+          width: "250px",      // Custom width
+          height: "40px"       // Custom height
+        },
+        btButton: function () {
+          console.log("Button clicked!");  // Custom action on button click
+          btsheet.closed();
+        },
+        btImage: {
+          src: "https://unsplash.it/400/200",
+          alt: "Custom image",
+          width: "400px",
+          height: "200px"
+        },
+        btBody: {
+          textColor: "#0e0e0e",          // Customize text color inside the sheet
+          backgroundColor: "#fff", // Customize background color (optional)
+          titleColor: "#ff4757",      // Customize title color
+          glassEffect: true           // Enable glass effect
+        },
+        btDim: "60%",  // Dim the background 60%
+        outsideTouch: true,
+        onClose: function () {
+          console.log("Bottom sheet closed");
+        }
+      });
+
+
+</code><button class="copy-btn" onclick="copyCode(this)">Copy</button></pre>
+
+
+
+
+
+
+
     </div>
   </section>
 
