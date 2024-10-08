@@ -3,6 +3,9 @@ const btsheet = {
     // Create overlay dynamically
     const overlay = document.createElement('div');
     overlay.className = 'btsheet-overlay';
+    
+    // Store the overlay globally so it can be used in the closed() method
+    btsheet.overlay = overlay;
 
     // Apply custom dimming effect to the overlay (if provided)
     if (options.btDim) {
@@ -15,6 +18,9 @@ const btsheet = {
     // Create bottom sheet container dynamically with unique class
     const sheet = document.createElement('div');
     sheet.className = 'btsheet-bottom-sheet';
+
+    // Store the sheet globally so it can be used in the closed() method
+    btsheet.sheet = sheet;
 
     // Apply custom body styles to the outer sheet (if provided)
     if (options.btBody) {
@@ -111,21 +117,25 @@ const btsheet = {
     // Close on click outside (if allowed)
     if (options.outsideTouch) {
       overlay.addEventListener('click', function() {
-        closeSheet();
+        btsheet.closed();  // Use the new global close method
       });
     }
 
     // Close button behavior
-    closeButton.addEventListener('click', closeSheet);
+    closeButton.addEventListener('click', btsheet.closed);  // Use the new global close method
+  },
 
-    // Close function
-    function closeSheet() {
+  // Dedicated method to close the sheet externally
+  closed: function() {
+    const sheet = btsheet.sheet;
+    const overlay = btsheet.overlay;
+    
+    if (sheet && overlay) {
       sheet.classList.remove('show');
       setTimeout(() => {
         document.body.removeChild(sheet);
         document.body.removeChild(overlay);
       }, 300);
-      if (options.onClose) options.onClose();
     }
   }
 };
