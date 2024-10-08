@@ -4,6 +4,14 @@ const btsheet = {
     const overlay = document.createElement('div');
     overlay.className = 'btsheet-overlay';
 
+    // Apply custom dimming effect to the overlay (if provided)
+    if (options.btDim) {
+      let dimValue = options.btDim.replace('%', '') / 100;  // Convert percentage to decimal
+      overlay.style.backgroundColor = `rgba(0, 0, 0, ${dimValue})`; // Apply dimming effect
+    } else {
+      overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)'; // Default dim to 50% if not provided
+    }
+
     // Create bottom sheet container dynamically with unique class
     const sheet = document.createElement('div');
     sheet.className = 'btsheet-bottom-sheet';

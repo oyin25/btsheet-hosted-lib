@@ -1,3 +1,13 @@
+.btsheet-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); /* Default dim (50%) */
+  z-index: 999; /* Ensure it sits behind the bottom sheet */
+}
+
 .btsheet-bottom-sheet {
   position: fixed;
   bottom: -100%;
