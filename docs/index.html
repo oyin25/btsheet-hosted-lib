@@ -143,6 +143,44 @@
   },
   btDim: "70%"
 });
+
+btsheet.closed();
+</code><button class="copy-btn" onclick="copyCode(this)">Copy</button></pre>
+      <h3>Example 3: Light Complex Custom Button Styles</h3>
+      <pre><code class="language-javascript">btsheet.hosted({
+        title: "Multitap!",
+        text: "Increase amount of TAP you can earn per one tap. +1 per tap for each level.",
+        buttonText: "Get it!",
+        button: {
+          color: "#ff4757",    // Button background color
+          textColor: "#fff",   // Button text color
+          width: "250px",      // Custom width
+          height: "40px"       // Custom height
+        },
+        btButton: function () {
+          console.log("Button clicked!");  // Custom action on button click
+          btsheet.closed();
+        },
+        btImage: {
+          src: "https://unsplash.it/400/200",
+          alt: "Custom image",
+          width: "400px",
+          height: "200px"
+        },
+        btBody: {
+          textColor: "#0e0e0e",          // Customize text color inside the sheet
+          backgroundColor: "#fff", // Customize background color (optional)
+          titleColor: "#ff4757",      // Customize title color
+          glassEffect: true           // Enable glass effect
+        },
+        btDim: "60%",  // Dim the background 60%
+        outsideTouch: true,
+        onClose: function () {
+          console.log("Bottom sheet closed");
+        }
+      });
+
+
 </code><button class="copy-btn" onclick="copyCode(this)">Copy</button></pre>
     </div>
   </section>
