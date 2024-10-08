@@ -5,9 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>btsheet-hosted Documentation</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Google Font for Fira Code -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400&display=swap" rel="stylesheet">
+  
+  <!-- PrismJS Dark Theme for Syntax Highlighting -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism-tomorrow.min.css">
+  
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism.min.css">
+  <style>
+    /* Code block styles */
+    pre code {
+      background-color: #2d2d2d;    /* Dark background */
+      color: #f8f8f2;               /* Light text color */
+      font-family: 'Fira Code', monospace;  /* Monospaced font */
+      padding: 15px;                /* Padding inside the code block */
+      border-radius: 8px;           /* Rounded corners */
+      font-size: 14px;              /* Adjust font size */
+      line-height: 1.5;             /* Better line spacing */
+      overflow-x: auto;             /* Horizontal scroll for long code */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    }
+
+    /* Style for the copy button */
+    .copy-btn {
+      background-color: #6200ea;    /* Button color */
+      color: white;                 /* Text color */
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      margin-left: 10px;
+    }
+
+    .copy-btn:hover {
+      background-color: #7e57c2;    /* Darker shade on hover */
+    }
+
+    /* General container styles */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h2, h3 {
+      color: #333;
+    }
+
+    h3 {
+      margin-top: 20px;
+    }
+
+    /* Slideshow images */
+    .slide {
+      display: none;
+      width: 100%;
+    }
+  </style>
+
 </head>
 <body>
   <header>
@@ -135,52 +193,8 @@
     backgroundColor: "#fff",
     textColor: "#333"
   },
-  button: {
-    color: "#ff4757",
-    textColor: "#fff",
-    width: "120px",
-    height: "40px"
-  },
   btDim: "70%"
 });
-
-btsheet.closed();
-</code><button class="copy-btn" onclick="copyCode(this)">Copy</button></pre>
-      <h3>Example 3: Light Complex Custom Button Styles</h3>
-      <pre><code class="language-javascript">btsheet.hosted({
-        title: "Multitap!",
-        text: "Increase amount of TAP you can earn per one tap. +1 per tap for each level.",
-        buttonText: "Get it!",
-        button: {
-          color: "#ff4757",    // Button background color
-          textColor: "#fff",   // Button text color
-          width: "250px",      // Custom width
-          height: "40px"       // Custom height
-        },
-        btButton: function () {
-          console.log("Button clicked!");  // Custom action on button click
-          btsheet.closed();
-        },
-        btImage: {
-          src: "https://unsplash.it/400/200",
-          alt: "Custom image",
-          width: "400px",
-          height: "200px"
-        },
-        btBody: {
-          textColor: "#0e0e0e",          // Customize text color inside the sheet
-          backgroundColor: "#fff", // Customize background color (optional)
-          titleColor: "#ff4757",      // Customize title color
-          glassEffect: true           // Enable glass effect
-        },
-        btDim: "60%",  // Dim the background 60%
-        outsideTouch: true,
-        onClose: function () {
-          console.log("Bottom sheet closed");
-        }
-      });
-
-
 </code><button class="copy-btn" onclick="copyCode(this)">Copy</button></pre>
     </div>
   </section>
@@ -191,8 +205,23 @@ btsheet.closed();
     </div>
   </footer>
 
+  <!-- PrismJS for Syntax Highlighting -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
+
+  <!-- Copy to clipboard functionality -->
   <script>
+    function copyCode(button) {
+      const codeElement = button.previousElementSibling;
+      const range = document.createRange();
+      range.selectNode(codeElement);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+      document.execCommand("copy");
+      window.getSelection().removeAllRanges();
+      button.innerText = "Copied!";
+      setTimeout(() => { button.innerText = "Copy"; }, 2000);
+    }
+
     // Slideshow functionality
     let slideIndex = 0;
     showSlides();
@@ -211,19 +240,7 @@ btsheet.closed();
       }
       slides[slideIndex].style.display = "block";
     }
-
-    // Copy to clipboard functionality
-    function copyCode(button) {
-      const codeElement = button.previousElementSibling;
-      const range = document.createRange();
-      range.selectNode(codeElement);
-      window.getSelection().removeAllRanges();
-      window.getSelection().addRange(range);
-      document.execCommand("copy");
-      window.getSelection().removeAllRanges();
-      button.innerText = "Copied!";
-      setTimeout(() => { button.innerText = "Copy"; }, 2000);
-    }
   </script>
+
 </body>
 </html>

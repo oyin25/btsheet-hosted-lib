@@ -1,6 +1,5 @@
 node_modules
 .DS_Store
 dist
-docs
 btsheet-hosted copy.js
 btsheet-hosted-obs.js

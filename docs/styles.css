@@ -43,33 +43,57 @@ nav a:hover {
   padding: 30px 0;
 }
 
-pre {
-  position: relative;
-  background-color: #eee;
-  padding: 15px;
-  border-radius: 5px;
-  overflow-x: auto;
+/* Style for the code block */
+/* Custom code block styles */
+pre code {
+  background-color: #2d2d2d;    /* Dark background */
+  color: #f8f8f2;               /* Light text color */
+  font-family: 'Fira Code', monospace;  /* Monospaced font for code */
+  padding: 15px;                /* Padding inside the code block */
+  border-radius: 8px;           /* Rounded corners */
+  font-size: 14px;              /* Adjust font size */
+  line-height: 1.5;             /* Better line spacing */
+  overflow-x: auto;             /* Allow horizontal scroll for long code */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
 }
 
-pre code {
+/* Style for specific keywords for syntax highlighting */
+code .keyword {
+  color: #ff79c6;  /* Pink for keywords */
+}
+
+code .string {
+  color: #50fa7b;  /* Green for strings */
+}
+
+code .function {
+  color: #8be9fd;  /* Cyan for function names */
+}
+
+code .number {
+  color: #bd93f9;  /* Purple for numbers */
+}
+
+code .comment {
+  color: #6272a4;  /* Grey for comments */
+}
+
+/* Style for the copy button */
+.copy-btn {
+  background-color: #6200ea;   /* Bright button color */
+  color: white;                /* Button text color */
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 10px;
   font-size: 14px;
 }
 
-.copy-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  padding: 5px 10px;
-  background-color: #6b4aff;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
+.copy-btn:hover {
+  background-color: #7e57c2;   /* Darker shade on hover */
 }
 
-.copy-btn:hover {
-  background-color: #5338e0;
-}
 
 .slideshow {
   position: relative;
@@ -109,4 +133,8 @@ button.prev {
 
 button.next {
   right: 0;
+}
+.bg-code {
+  background-color: #999999;
+  padding: 5%;
 }
