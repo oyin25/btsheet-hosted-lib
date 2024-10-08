@@ -1,9 +1,23 @@
 const btsheet = {
-  hosted: function(options = {}) {
+  // Flag to track if the sheet is open
+  isOpen: false,
+
+  hosted: function (options = {}) {
+    if (btsheet.isOpen) {
+      console.log("btsheet already Open, Let Close and Open again..");
+      btsheet.closed();
+      setTimeout(() => {
+        btsheet.hosted(options);  // Reopen after closing
+      }, 350);  // Wait for the sheet to close before reopening
+      return;
+    } else {
+      console.log("btsheet is not Open yet, Opening..");
+    }
+
     // Create overlay dynamically
     const overlay = document.createElement('div');
     overlay.className = 'btsheet-overlay';
-    
+
     // Store the overlay globally so it can be used in the closed() method
     btsheet.overlay = overlay;
 
@@ -15,6 +29,15 @@ const btsheet = {
       overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)'; // Default dim to 50% if not provided
     }
 
+    // Ensure the overlay covers the entire webpage including the header
+    overlay.style.zIndex = '1000';
+    overlay.style.position = 'fixed';
+    overlay.style.top = 0;
+    overlay.style.left = 0;
+    overlay.style.width = '100%';
+    overlay.style.height = '100%';
+    overlay.style.display = 'block';
+
     // Create bottom sheet container dynamically with unique class
     const sheet = document.createElement('div');
     sheet.className = 'btsheet-bottom-sheet';
@@ -24,8 +47,8 @@ const btsheet = {
 
     // Apply custom body styles to the outer sheet (if provided)
     if (options.btBody) {
-      sheet.style.backgroundColor = options.btBody.backgroundColor || "rgba(255, 255, 255, 0.9)"; // Apply background to entire sheet
-      sheet.style.color = options.btBody.textColor || "#000"; // Apply text color to entire sheet
+      sheet.style.backgroundColor = options.btBody.backgroundColor || "rgba(255, 255, 255, 0.9)";
+      sheet.style.color = options.btBody.textColor || "#000";
 
       // Apply glass effect if enabled
       if (options.btBody.glassEffect) {
@@ -33,7 +56,7 @@ const btsheet = {
         sheet.style.backdropFilter = 'blur(10px)';  // Add glass blur effect
         sheet.style.border = "1px solid rgba(255, 255, 255, 0.18)";
       } else {
-        sheet.style.backdropFilter = 'none';  // No blur if glassEffect is not enabled
+        sheet.style.backdropFilter = 'none';
       }
     }
 
@@ -56,10 +79,10 @@ const btsheet = {
     // Image (if provided)
     if (options.btImage) {
       const image = document.createElement('img');
-      image.src = options.btImage.src || '';  // Image source
-      image.alt = options.btImage.alt || '';  // Image alt text
-      image.style.width = options.btImage.width || 'auto';  // Image width
-      image.style.height = options.btImage.height || 'auto';  // Image height
+      image.src = options.btImage.src || '';
+      image.alt = options.btImage.alt || '';
+      image.style.width = options.btImage.width || 'auto';
+      image.style.height = options.btImage.height || 'auto';
       content.appendChild(image);
     }
 
@@ -67,7 +90,7 @@ const btsheet = {
     if (options.title) {
       const title = document.createElement('h2');
       title.innerText = options.title;
-      title.style.color = options.btBody?.titleColor || options.btBody?.textColor || "#000"; // Apply custom title color or text color
+      title.style.color = options.btBody?.titleColor || options.btBody?.textColor || "#000";
       content.appendChild(title);
     }
 
@@ -82,16 +105,12 @@ const btsheet = {
     if (options.button) {
       const button = document.createElement('button');
       button.innerText = options.buttonText || 'OK';
-
-      // Apply custom button styles
       button.style.backgroundColor = options.button.color || '#ff4757';
       button.style.color = options.button.textColor || '#fff';
       button.style.width = options.button.width || 'auto';
       button.style.height = options.button.height || 'auto';
       button.style.borderRadius = '8px'; // Add a border-radius for consistent style
       button.style.padding = '10px'; // Default padding
-
-      // Append the button to the content area
       content.appendChild(button);
 
       // Custom button click behavior
@@ -114,32 +133,46 @@ const btsheet = {
       sheet.classList.add('show');
     }, 100);
 
+    // Disable user interaction with the webpage while the sheet is open (btInteract)
+    if (options.btInteract === false) {
+      document.body.style.overflow = 'hidden'; // Disable scrolling
+    }
+
+    // Mark the sheet as open
+    btsheet.isOpen = true;
+
     // Close on click outside (if allowed)
     if (options.outsideTouch) {
-      overlay.addEventListener('click', function() {
-        btsheet.closed();  // Use the new global close method
+      overlay.addEventListener('click', function () {
+        btsheet.closed();
       });
     }
 
     // Close button behavior (trigger the onClose callback)
-    closeButton.addEventListener('click', function() {
+    closeButton.addEventListener('click', function () {
       if (typeof options.onClose === 'function') {
         options.onClose(); // Call the onClose function when "X" is clicked
       }
-      btsheet.closed();  // Use the new global close method
+      btsheet.closed();  // Close the sheet
     });
   },
 
   // Dedicated method to close the sheet externally
-  closed: function() {
+  closed: function () {
     const sheet = btsheet.sheet;
     const overlay = btsheet.overlay;
-    
+
     if (sheet && overlay) {
       sheet.classList.remove('show');
       setTimeout(() => {
         document.body.removeChild(sheet);
         document.body.removeChild(overlay);
+
+        // Re-enable user interaction (if disabled before)
+        document.body.style.overflow = 'auto';
+
+        // Mark the sheet as closed
+        btsheet.isOpen = false;
       }, 300);
     }
   }
