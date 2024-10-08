@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>btsheet-hosted Documentation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>btsheet-hosted Library</h1>
+      <p>A simple and customizable bottom sheet dialog library for the web.</p>
+    </div>
+  </header>
+
+  <nav>
+    <div class="container">
+      <a href="#installation">Installation</a>
+      <a href="#basic-usage">Basic Usage</a>
+      <a href="#api">API Reference</a>
+      <a href="#examples">Examples</a>
+    </div>
+  </nav>
+
+  <section id="installation" class="section">
+    <div class="container">
+      <h2>Installation</h2>
+      <p>To use <strong>btsheet-hosted</strong> in your project, include the following script and stylesheet from the CDN:</p>
+      <pre><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/oyin25/btsheet-hosted-lib@latest/btsheet-hosted.css"&gt;
+&lt;script src="https://cdn.jsdelivr.net/gh/oyin25/btsheet-hosted-lib@latest/btsheet-hosted.js"&gt;&lt;/script&gt;</code></pre>
+    </div>
+  </section>
+
+  <section id="basic-usage" class="section">
+    <div class="container">
+      <h2>Basic Usage</h2>
+      <p>Here is a simple example of how to create and display a bottom sheet dialog using <strong>btsheet-hosted</strong>:</p>
+      <pre><code> &lt;script&gt;
+btsheet.hosted({
+  title: "Multitap!",
+  text: "Increase amount of TAP you can earn per one tap.",
+  buttonText: "Get it!",
+  btButton: function() {
+    alert('Button Clicked!');
+  }
+});
+&lt;/script&gt;
+</code></pre>
+    </div>
+  </section>
+
+  <section id="api" class="section">
+    <div class="container">
+      <h2>API Reference</h2>
+      <p><strong>btsheet.hosted(options)</strong></p>
+      <p>The <strong>options</strong> object allows you to customize the behavior and appearance of the bottom sheet. Below are the available options:</p>
+      <ul>
+        <li><strong>title</strong> (string): Title of the bottom sheet.</li>
+        <li><strong>text</strong> (string): Description or text inside the bottom sheet.</li>
+        <li><strong>buttonText</strong> (string): Text to display inside the button.</li>
+        <li><strong>btButton</strong> (function): Custom function for button click behavior.</li>
+        <li><strong>btImage</strong> (object): Image properties:
+          <ul>
+            <li><strong>src</strong> (string): URL of the image.</li>
+            <li><strong>width</strong> (string): Width of the image (e.g., '200px').</li>
+            <li><strong>height</strong> (string): Height of the image (e.g., '200px').</li>
+          </ul>
+        </li>
+        <li><strong>btBody</strong> (object): Body styles:
+          <ul>
+            <li><strong>backgroundColor</strong> (string): Background color of the sheet (e.g., 'rgba(0, 0, 255, 0.6)').</li>
+            <li><strong>textColor</strong> (string): Color of the text inside the sheet.</li>
+            <li><strong>titleColor</strong> (string): Color of the title inside the sheet.</li>
+            <li><strong>glassEffect</strong> (boolean): Enables glass effect when true.</li>
+          </ul>
+        </li>
+        <li><strong>btDim</strong> (string): Dims the background with a percentage (e.g., '60%').</li>
+        <li><strong>outsideTouch</strong> (boolean): Closes the sheet when clicked outside if true.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="examples" class="section">
+    <div class="container">
+      <h2>Examples</h2>
+      <p>Here are a few examples demonstrating the use of <strong>btsheet-hosted</strong> with different options:</p>
+
+      <h3>Example 1: Glass Effect with Custom Button</h3>
+      <pre><code>
+btsheet.hosted({
+  title: "Multitap!",
+  text: "Increase amount of TAP you can earn per one tap.",
+  buttonText: "Get it!",
+  btButton: function() {
+    alert('Button Clicked!');
+  },
+  btBody: {
+    backgroundColor: "rgba(0, 0, 255, 0.6)",
+    textColor: "#fff",
+    glassEffect: true
+  },
+  btDim: "50%"
+});
+</code></pre>
+
+      <h3>Example 2: Image and Custom Button Styles</h3>
+      <pre><code>
+btsheet.hosted({
+  title: "Awesome Image!",
+  text: "Here's an image example.",
+  buttonText: "OK",
+  btButton: function() {
+    alert('Button Clicked!');
+  },
+  btImage: {
+    src: "https://unsplash.it/400/200",
+    width: "400px",
+    height: "200px"
+  },
+  btBody: {
+    backgroundColor: "#fff",
+    textColor: "#333"
+  },
+  button: {
+    color: "#ff4757",
+    textColor: "#fff",
+    width: "120px",
+    height: "40px"
+  },
+  btDim: "70%"
+});
+</code></pre>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 btsheet-hosted Library | Documentation</p>
+    </div>
+  </footer>
+</body>
+</html>
