@@ -7,6 +7,7 @@
   <title>btsheet-hosted Documentation</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism.min.css">
 </head>
 <body>
   <header>
@@ -25,12 +26,25 @@
     </div>
   </nav>
 
+  <!-- Slideshow Section -->
+  <section class="slideshow">
+    <div class="container">
+      <div class="slides">
+        <img class="slide" src="Screenshot_20241008_020101_Chrome.jpg" alt="Screenshot 1">
+        <img class="slide" src="Screenshot_20241008_020422_Chrome.jpg" alt="Screenshot 2">
+        <img class="slide" src="Screenshot_20241008_020521_Chrome.jpg" alt="Screenshot 3">
+      </div>
+      <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+      <button class="next" onclick="plusSlides(1)">&#10095;</button>
+    </div>
+  </section>
+
   <section id="installation" class="section">
     <div class="container">
       <h2>Installation</h2>
       <p>To use <strong>btsheet-hosted</strong> in your project, include the following script and stylesheet from the CDN:</p>
-      <pre><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/oyin25/btsheet-hosted-lib@latest/btsheet-hosted.css"&gt;
-&lt;script src="https://cdn.jsdelivr.net/gh/oyin25/btsheet-hosted-lib@latest/btsheet-hosted.js"&gt;&lt;/script&gt;</code></pre>
+      <pre><code class="language-html">&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/oyin25/btsheet-hosted-lib@latest/btsheet-hosted.css"&gt;
+&lt;script src="https://cdn.jsdelivr.net/gh/oyin25/btsheet-hosted-lib@latest/btsheet-hosted.js"&gt;&lt;/script&gt;</code><button class="copy-btn" onclick="copyCode(this)">Copy</button></pre>
     </div>
   </section>
 
@@ -38,8 +52,7 @@
     <div class="container">
       <h2>Basic Usage</h2>
       <p>Here is a simple example of how to create and display a bottom sheet dialog using <strong>btsheet-hosted</strong>:</p>
-      <pre><code> &lt;script&gt;
-btsheet.hosted({
+      <pre><code class="language-javascript">btsheet.hosted({
   title: "Multitap!",
   text: "Increase amount of TAP you can earn per one tap.",
   buttonText: "Get it!",
@@ -47,8 +60,7 @@ btsheet.hosted({
     alert('Button Clicked!');
   }
 });
-&lt;/script&gt;
-</code></pre>
+</code><button class="copy-btn" onclick="copyCode(this)">Copy</button></pre>
     </div>
   </section>
 
@@ -89,8 +101,7 @@ btsheet.hosted({
       <p>Here are a few examples demonstrating the use of <strong>btsheet-hosted</strong> with different options:</p>
 
       <h3>Example 1: Glass Effect with Custom Button</h3>
-      <pre><code>
-btsheet.hosted({
+      <pre><code class="language-javascript">btsheet.hosted({
   title: "Multitap!",
   text: "Increase amount of TAP you can earn per one tap.",
   buttonText: "Get it!",
@@ -104,11 +115,10 @@ btsheet.hosted({
   },
   btDim: "50%"
 });
-</code></pre>
+</code><button class="copy-btn" onclick="copyCode(this)">Copy</button></pre>
 
       <h3>Example 2: Image and Custom Button Styles</h3>
-      <pre><code>
-btsheet.hosted({
+      <pre><code class="language-javascript">btsheet.hosted({
   title: "Awesome Image!",
   text: "Here's an image example.",
   buttonText: "OK",
@@ -132,7 +142,7 @@ btsheet.hosted({
   },
   btDim: "70%"
 });
-</code></pre>
+</code><button class="copy-btn" onclick="copyCode(this)">Copy</button></pre>
     </div>
   </section>
 
@@ -141,5 +151,40 @@ btsheet.hosted({
       <p>&copy; 2024 btsheet-hosted Library | Documentation</p>
     </div>
   </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
+  <script>
+    // Slideshow functionality
+    let slideIndex = 0;
+    showSlides();
+
+    function plusSlides(n) {
+      slideIndex += n;
+      showSlides();
+    }
+
+    function showSlides() {
+      let slides = document.getElementsByClassName("slide");
+      if (slideIndex >= slides.length) slideIndex = 0;
+      if (slideIndex < 0) slideIndex = slides.length - 1;
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[slideIndex].style.display = "block";
+    }
+
+    // Copy to clipboard functionality
+    function copyCode(button) {
+      const codeElement = button.previousElementSibling;
+      const range = document.createRange();
+      range.selectNode(codeElement);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+      document.execCommand("copy");
+      window.getSelection().removeAllRanges();
+      button.innerText = "Copied!";
+      setTimeout(() => { button.innerText = "Copy"; }, 2000);
+    }
+  </script>
 </body>
 </html>

@@ -1,0 +1,75 @@
+.btsheet-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); /* Default dim (50%) */
+  z-index: 999; /* Ensure it sits behind the bottom sheet */
+}
+
+.btsheet-bottom-sheet {
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.9); /* Default background for outer sheet */
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  transition: bottom 0.3s ease-in-out;
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.btsheet-bottom-sheet.show {
+  bottom: 0;
+}
+
+.btsheet-sheet-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btsheet-close-btn {
+  font-size: 30px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.btsheet-content-wrapper {
+  padding: 10px;
+}
+
+.btsheet-sheet-content {
+  text-align: center;
+}
+
+.btsheet-sheet-content img {
+  display: block;
+  margin: 10px auto;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.btsheet-sheet-content h2 {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.btsheet-sheet-content p {
+  margin: 10px 0;
+}
+
+.btsheet-sheet-content button {
+  background-color: #ff4757;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+}

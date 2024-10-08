@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bottom Sheet Dialog</title>
+  <link rel="stylesheet" href="styles1.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/oyin25/btsheet-hosted-lib@2.1.2/btsheet-hosted.css">
+</head>
+
+<body>
+  <!-- Button to open bottom sheet -->
+  <button id="openSheet"
+    onclick="showSheet('Multitap', 'Increase amount of TAP you can earn per one tap. +1 per tap for each level.')">Open
+    Bottom Sheet</button>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/gh/oyin25/btsheet-hosted-lib@2.1.2/btsheet-hosted.js"></script>
+  <script>
+
+    function showSheet(title, text) {
+      btsheet.hosted({
+        title: "Multitap!",
+        text: "Increase amount of TAP you can earn per one tap. +1 per tap for each level.",
+        buttonText: "Get it!",
+        button: {
+          color: "#ff4757",    // Button background color
+          textColor: "#fff",   // Button text color
+          width: "250px",      // Custom width
+          height: "40px"       // Custom height
+        },
+        btButton: function () {
+          console.log("Button clicked!");  // Custom action on button click
+          alert("Button was clicked!");
+        },
+        btImage: {
+          src: "https://unsplash.it/400/200",
+          alt: "Custom image",
+          width: "400px",
+          height: "200px"
+        },
+        btBody: {
+          textColor: "#0e0e0e",          // Customize text color inside the sheet
+          backgroundColor: "#fff", // Customize background color (optional)
+          titleColor: "#ff4757",      // Customize title color
+          glassEffect: true           // Enable glass effect
+        },
+        btDim: "60%",  // Dim the background 60%
+        outsideTouch: true,
+        onClose: function () {
+          console.log("Bottom sheet closed");
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>
