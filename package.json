@@ -1,0 +1,30 @@
+{
+  "name": "btsheet-hosted-lib",
+  "version": "3.0.0",
+  "description": "A simple and customizable bottom sheet dialog library for the web.",
+  "main": "index.js",
+  "files": ["index.js", "btsheet-hosted.css"],
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oyin25/btsheet-hosted-lib.git"
+  },
+  "keywords": [
+    "bottom",
+    "sheet",
+    "dialog",
+    "modal",
+    "UI"
+  ],
+  "author": "Hosted",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oyin25/btsheet-hosted-lib/issues"
+  },
+  "homepage": "https://github.com/oyin25/btsheet-hosted-lib#readme"
+}

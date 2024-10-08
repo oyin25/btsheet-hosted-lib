@@ -1,1 +1,146 @@
-(function(_0x6849c,_0x10896c){const _0x1c3bdb=a0_0x4a69,_0x43f7f4=_0x6849c();while(!![]){try{const _0x51a7ae=parseInt(_0x1c3bdb(0x235))/0x1*(parseInt(_0x1c3bdb(0x1f7))/0x2)+parseInt(_0x1c3bdb(0x23a))/0x3*(parseInt(_0x1c3bdb(0x203))/0x4)+-parseInt(_0x1c3bdb(0x236))/0x5+parseInt(_0x1c3bdb(0x239))/0x6+-parseInt(_0x1c3bdb(0x202))/0x7*(-parseInt(_0x1c3bdb(0x1f4))/0x8)+-parseInt(_0x1c3bdb(0x21b))/0x9+-parseInt(_0x1c3bdb(0x1f9))/0xa;if(_0x51a7ae===_0x10896c)break;else _0x43f7f4['push'](_0x43f7f4['shift']());}catch(_0x5cfe4e){_0x43f7f4['push'](_0x43f7f4['shift']());}}}(a0_0x2d05,0xe8117));const btsheet={'hosted':function(_0x3d08e4={}){const _0x51a176=a0_0x4a69,_0x4f8d69={'vkteR':_0x51a176(0x22f),'JGRkT':'div','aHUAs':_0x51a176(0x22a),'GWZZS':function(_0x598023,_0x49fce0){return _0x598023/_0x49fce0;},'wxsow':_0x51a176(0x200),'FkKoR':_0x51a176(0x219),'eYkxr':'btsheet-sheet-header','KRFfv':_0x51a176(0x238),'vKlZb':'&times;','KANxp':_0x51a176(0x1fe),'xWTGR':'img','yHIKZ':_0x51a176(0x1fb),'KLTJV':_0x51a176(0x22d),'YHUwv':_0x51a176(0x224),'KhLoH':_0x51a176(0x213),'Hlrec':_0x51a176(0x230),'XvSsn':function(_0x19183e,_0x353cd5){return _0x19183e===_0x353cd5;},'NvhcD':_0x51a176(0x221),'pLFJK':_0x51a176(0x1f5),'cSrOD':function(_0x1f3aa2,_0x15a34f,_0x46fb3f){return _0x1f3aa2(_0x15a34f,_0x46fb3f);}},_0xb9a9d=document[_0x51a176(0x21f)](_0x4f8d69[_0x51a176(0x216)]);_0xb9a9d[_0x51a176(0x217)]=_0x4f8d69['aHUAs'],btsheet['overlay']=_0xb9a9d;if(_0x3d08e4[_0x51a176(0x1ee)]){let _0x426082=_0x4f8d69[_0x51a176(0x1ed)](_0x3d08e4[_0x51a176(0x1ee)][_0x51a176(0x209)]('%',''),0x64);_0xb9a9d[_0x51a176(0x237)][_0x51a176(0x1f2)]=_0x51a176(0x1f3)+_0x426082+')';}else _0xb9a9d[_0x51a176(0x237)]['backgroundColor']=_0x51a176(0x206);const _0x592b2c=document[_0x51a176(0x21f)](_0x4f8d69[_0x51a176(0x216)]);_0x592b2c[_0x51a176(0x217)]=_0x51a176(0x234),btsheet[_0x51a176(0x20a)]=_0x592b2c;_0x3d08e4[_0x51a176(0x20b)]&&(_0x592b2c[_0x51a176(0x237)][_0x51a176(0x1f2)]=_0x3d08e4[_0x51a176(0x20b)]['backgroundColor']||_0x51a176(0x1ec),_0x592b2c[_0x51a176(0x237)]['color']=_0x3d08e4[_0x51a176(0x20b)][_0x51a176(0x227)]||_0x51a176(0x22d),_0x3d08e4['btBody'][_0x51a176(0x21a)]?(_0x592b2c[_0x51a176(0x237)]['backgroundColor']=_0x3d08e4[_0x51a176(0x20b)][_0x51a176(0x1f2)]||'rgba(255,\x20255,\x20255,\x200.1)',_0x592b2c[_0x51a176(0x237)]['backdropFilter']=_0x51a176(0x1f1),_0x592b2c[_0x51a176(0x237)][_0x51a176(0x20c)]=_0x4f8d69[_0x51a176(0x23b)]):_0x592b2c[_0x51a176(0x237)][_0x51a176(0x229)]=_0x4f8d69[_0x51a176(0x218)]);const _0x5bfda2=document['createElement'](_0x4f8d69[_0x51a176(0x216)]);_0x5bfda2['className']=_0x4f8d69[_0x51a176(0x1fa)];const _0x4caa8e=document['createElement'](_0x4f8d69[_0x51a176(0x22e)]);_0x4caa8e[_0x51a176(0x217)]=_0x51a176(0x22b),_0x4caa8e[_0x51a176(0x214)]=_0x4f8d69[_0x51a176(0x21d)],_0x5bfda2[_0x51a176(0x21c)](_0x4caa8e);const _0x5abc4c=document[_0x51a176(0x21f)](_0x4f8d69[_0x51a176(0x216)]);_0x5abc4c[_0x51a176(0x217)]=_0x51a176(0x208);const _0x2af8fe=document[_0x51a176(0x21f)](_0x4f8d69[_0x51a176(0x216)]);_0x2af8fe[_0x51a176(0x217)]=_0x4f8d69[_0x51a176(0x205)];if(_0x3d08e4[_0x51a176(0x1f6)]){const _0x49f692=document[_0x51a176(0x21f)](_0x4f8d69['xWTGR']);_0x49f692[_0x51a176(0x210)]=_0x3d08e4[_0x51a176(0x1f6)][_0x51a176(0x210)]||'',_0x49f692['alt']=_0x3d08e4[_0x51a176(0x1f6)][_0x51a176(0x1eb)]||'',_0x49f692[_0x51a176(0x237)][_0x51a176(0x201)]=_0x3d08e4[_0x51a176(0x1f6)][_0x51a176(0x201)]||_0x4f8d69[_0x51a176(0x225)],_0x49f692['style'][_0x51a176(0x204)]=_0x3d08e4[_0x51a176(0x1f6)][_0x51a176(0x204)]||_0x4f8d69[_0x51a176(0x225)],_0x2af8fe[_0x51a176(0x21c)](_0x49f692);}if(_0x3d08e4[_0x51a176(0x211)]){const _0xcf78af=document[_0x51a176(0x21f)]('h2');_0xcf78af[_0x51a176(0x20e)]=_0x3d08e4[_0x51a176(0x211)],_0xcf78af[_0x51a176(0x237)][_0x51a176(0x1ef)]=_0x3d08e4[_0x51a176(0x20b)]?.[_0x51a176(0x207)]||_0x3d08e4[_0x51a176(0x20b)]?.['textColor']||_0x4f8d69['KLTJV'],_0x2af8fe[_0x51a176(0x21c)](_0xcf78af);}if(_0x3d08e4['text']){const _0x408574=document['createElement']('p');_0x408574[_0x51a176(0x20e)]=_0x3d08e4[_0x51a176(0x215)],_0x2af8fe[_0x51a176(0x21c)](_0x408574);}if(_0x3d08e4[_0x51a176(0x224)]){const _0xeb166a=document[_0x51a176(0x21f)](_0x4f8d69[_0x51a176(0x223)]);_0xeb166a[_0x51a176(0x20e)]=_0x3d08e4['buttonText']||'OK',_0xeb166a[_0x51a176(0x237)][_0x51a176(0x1f2)]=_0x3d08e4[_0x51a176(0x224)]['color']||'#ff4757',_0xeb166a[_0x51a176(0x237)]['color']=_0x3d08e4['button'][_0x51a176(0x227)]||_0x4f8d69[_0x51a176(0x231)],_0xeb166a[_0x51a176(0x237)][_0x51a176(0x201)]=_0x3d08e4[_0x51a176(0x224)][_0x51a176(0x201)]||_0x4f8d69[_0x51a176(0x225)],_0xeb166a[_0x51a176(0x237)]['height']=_0x3d08e4['button'][_0x51a176(0x204)]||_0x4f8d69[_0x51a176(0x225)],_0xeb166a[_0x51a176(0x237)][_0x51a176(0x22c)]=_0x51a176(0x1f0),_0xeb166a[_0x51a176(0x237)][_0x51a176(0x226)]=_0x4f8d69['Hlrec'],_0x2af8fe[_0x51a176(0x21c)](_0xeb166a),_0x4f8d69['XvSsn'](typeof _0x3d08e4['btButton'],_0x4f8d69[_0x51a176(0x222)])&&_0xeb166a[_0x51a176(0x233)](_0x4f8d69[_0x51a176(0x228)],_0x3d08e4[_0x51a176(0x1fc)]);}_0x5abc4c[_0x51a176(0x21c)](_0x2af8fe),_0x592b2c['appendChild'](_0x5bfda2),_0x592b2c[_0x51a176(0x21c)](_0x5abc4c),document['body'][_0x51a176(0x21c)](_0xb9a9d),document[_0x51a176(0x1ff)][_0x51a176(0x21c)](_0x592b2c),_0x4f8d69[_0x51a176(0x232)](setTimeout,()=>{_0x592b2c['classList']['add'](_0x4f8d69['vkteR']);},0x64),_0x3d08e4[_0x51a176(0x212)]&&_0xb9a9d['addEventListener'](_0x4f8d69[_0x51a176(0x228)],function(){const _0x2b50c2=_0x51a176;btsheet[_0x2b50c2(0x20f)]();}),_0x4caa8e[_0x51a176(0x233)](_0x4f8d69[_0x51a176(0x228)],btsheet[_0x51a176(0x20f)]);},'closed':function(){const _0x20d64e=a0_0x4a69,_0x7a6c2e={'WDogZ':function(_0x92b30a,_0x415d74){return _0x92b30a&&_0x415d74;},'STftt':function(_0x5935af,_0x47f3eb,_0xe2a8f2){return _0x5935af(_0x47f3eb,_0xe2a8f2);}},_0x360fb7=btsheet[_0x20d64e(0x20a)],_0x320861=btsheet[_0x20d64e(0x220)];_0x7a6c2e[_0x20d64e(0x1fd)](_0x360fb7,_0x320861)&&(_0x360fb7['classList'][_0x20d64e(0x1f8)](_0x20d64e(0x22f)),_0x7a6c2e[_0x20d64e(0x21e)](setTimeout,()=>{const _0xf6eb61=_0x20d64e;document[_0xf6eb61(0x1ff)][_0xf6eb61(0x20d)](_0x360fb7),document[_0xf6eb61(0x1ff)]['removeChild'](_0x320861);},0x12c));}};function a0_0x4a69(_0x535d3e,_0x517501){const _0x2d0515=a0_0x2d05();return a0_0x4a69=function(_0x4a69d7,_0x1cf021){_0x4a69d7=_0x4a69d7-0x1eb;let _0x586476=_0x2d0515[_0x4a69d7];if(a0_0x4a69['HerHpV']===undefined){var _0x342c96=function(_0x3af5f5){const _0x5300d0='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x4a80b6='',_0x2ba621='';for(let _0x5556ae=0x0,_0x13ae4c,_0x3a990f,_0x25a480=0x0;_0x3a990f=_0x3af5f5['charAt'](_0x25a480++);~_0x3a990f&&(_0x13ae4c=_0x5556ae%0x4?_0x13ae4c*0x40+_0x3a990f:_0x3a990f,_0x5556ae++%0x4)?_0x4a80b6+=String['fromCharCode'](0xff&_0x13ae4c>>(-0x2*_0x5556ae&0x6)):0x0){_0x3a990f=_0x5300d0['indexOf'](_0x3a990f);}for(let _0x5fb83e=0x0,_0x4d3d95=_0x4a80b6['length'];_0x5fb83e<_0x4d3d95;_0x5fb83e++){_0x2ba621+='%'+('00'+_0x4a80b6['charCodeAt'](_0x5fb83e)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x2ba621);};a0_0x4a69['HnFlzJ']=_0x342c96,_0x535d3e=arguments,a0_0x4a69['HerHpV']=!![];}const _0x3bb0b7=_0x2d0515[0x0],_0x4459d9=_0x4a69d7+_0x3bb0b7,_0x1c4980=_0x535d3e[_0x4459d9];return!_0x1c4980?(_0x586476=a0_0x4a69['HnFlzJ'](_0x586476),_0x535d3e[_0x4459d9]=_0x586476):_0x586476=_0x1c4980,_0x586476;},a0_0x4a69(_0x535d3e,_0x517501);}function a0_0x2d05(){const _0x367427=['C2HVDW','mtbWEa','s2HmB0G','y1nYt0q','ywrKrxzLBNrmAxn0zw5LCG','yNrZAgvLDc1IB3r0B20TC2HLzxq','nJmYndm1qNHHuev6','mJiXntqWnxPVsMPJsq','C3r5Bgu','C3bHBG','mJy1mJeWmMnbt1vUza','nZuZwMnfrhHn','D3HZB3C','ywX0','CMDIysGYntuSidi1nsWGmJu1lcaWlJKP','r1DAwLm','yNreAw0','y29SB3i','ohb4','yMX1CIGXmhb4kq','yMfJA2DYB3vUzenVBg9Y','CMDIysGWlcaWlcaWlca','ndbOAe9OuvG','y2XPy2S','yNrjBwfNzq','mKnrDKnezq','CMvTB3zL','ntmYodqWmg92yKDlDG','zvLREhi','yxv0BW','yNrcDxr0B24','v0rVz1O','yNrZAgvLDc1ZAgvLDc1JB250zw50','yM9KEq','mxb4ihnVBgLKihjNyMeOmJu1lcaYntuSidi1nsWGmc4XocK','D2LKDgG','mta5ntG3ofzNtgrHAG','mtyXndr4z0vsBuy','AgvPz2H0','s0foEha','CMDIysGWlcaWlcaWlcaWlJuP','DgL0BgvdB2XVCG','yNrZAgvLDc1JB250zw50lxDYyxbWzxi','CMvWBgfJzq','C2HLzxq','yNrcB2r5','yM9YzgvY','CMvTB3zLq2HPBgq','Aw5UzxjuzxH0','y2XVC2vK','C3jJ','DgL0Bgu','B3v0C2LKzvrVDwnO','i2zMzG','Aw5Uzxjive1m','Dgv4Da','sKDsA1q','y2XHC3noyw1L','rMTlB1i','BM9Uzq','z2XHC3nfzMzLy3q','odq5nda3neLpwe5Zzq','yxbWzw5Kq2HPBgq','DKTSwMi','u1rMDhq','y3jLyxrLrwXLBwvUDa','B3zLCMXHEq','zNvUy3rPB24','tNzOy0q','wuHvD3y','yNv0Dg9U','EuHjs1O','CgfKzgLUzW','Dgv4DenVBg9Y','CeXgsKS','yMfJA2rYB3bgAwX0zxi','yNrZAgvLDc1VDMvYBgf5','yNrZAgvLDc1JBg9Zzs1IDg4','yM9YzgvYuMfKAxvZ','iZaWma','s1jgzNy'];a0_0x2d05=function(){return _0x367427;};return a0_0x2d05();}
+const btsheet = {
+  hosted: function(options = {}) {
+    // Create overlay dynamically
+    const overlay = document.createElement('div');
+    overlay.className = 'btsheet-overlay';
+    
+    // Store the overlay globally so it can be used in the closed() method
+    btsheet.overlay = overlay;
+
+    // Apply custom dimming effect to the overlay (if provided)
+    if (options.btDim) {
+      let dimValue = options.btDim.replace('%', '') / 100;  // Convert percentage to decimal
+      overlay.style.backgroundColor = `rgba(0, 0, 0, ${dimValue})`; // Apply dimming effect
+    } else {
+      overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)'; // Default dim to 50% if not provided
+    }
+
+    // Create bottom sheet container dynamically with unique class
+    const sheet = document.createElement('div');
+    sheet.className = 'btsheet-bottom-sheet';
+
+    // Store the sheet globally so it can be used in the closed() method
+    btsheet.sheet = sheet;
+
+    // Apply custom body styles to the outer sheet (if provided)
+    if (options.btBody) {
+      sheet.style.backgroundColor = options.btBody.backgroundColor || "rgba(255, 255, 255, 0.9)"; // Apply background to entire sheet
+      sheet.style.color = options.btBody.textColor || "#000"; // Apply text color to entire sheet
+
+      // Apply glass effect if enabled
+      if (options.btBody.glassEffect) {
+        sheet.style.backgroundColor = options.btBody.backgroundColor || "rgba(255, 255, 255, 0.1)";
+        sheet.style.backdropFilter = 'blur(10px)';  // Add glass blur effect
+        sheet.style.border = "1px solid rgba(255, 255, 255, 0.18)";
+      } else {
+        sheet.style.backdropFilter = 'none';  // No blur if glassEffect is not enabled
+      }
+    }
+
+    // Create sheet header with close button
+    const header = document.createElement('div');
+    header.className = 'btsheet-sheet-header';
+    const closeButton = document.createElement('span');
+    closeButton.className = 'btsheet-close-btn';
+    closeButton.innerHTML = '&times;';
+    header.appendChild(closeButton);
+
+    // Create content wrapper (for content inside the sheet)
+    const contentWrapper = document.createElement('div');
+    contentWrapper.className = 'btsheet-content-wrapper';
+
+    // Create content area
+    const content = document.createElement('div');
+    content.className = 'btsheet-sheet-content';
+
+    // Image (if provided)
+    if (options.btImage) {
+      const image = document.createElement('img');
+      image.src = options.btImage.src || '';  // Image source
+      image.alt = options.btImage.alt || '';  // Image alt text
+      image.style.width = options.btImage.width || 'auto';  // Image width
+      image.style.height = options.btImage.height || 'auto';  // Image height
+      content.appendChild(image);
+    }
+
+    // Title
+    if (options.title) {
+      const title = document.createElement('h2');
+      title.innerText = options.title;
+      title.style.color = options.btBody?.titleColor || options.btBody?.textColor || "#000"; // Apply custom title color or text color
+      content.appendChild(title);
+    }
+
+    // Text (Now supports HTML)
+    if (options.text) {
+      const text = document.createElement('p');
+      text.innerHTML = options.text; // Allow HTML content
+      content.appendChild(text);
+    }
+
+    // Button
+    if (options.button) {
+      const button = document.createElement('button');
+      button.innerText = options.buttonText || 'OK';
+
+      // Apply custom button styles
+      button.style.backgroundColor = options.button.color || '#ff4757';
+      button.style.color = options.button.textColor || '#fff';
+      button.style.width = options.button.width || 'auto';
+      button.style.height = options.button.height || 'auto';
+      button.style.borderRadius = '8px'; // Add a border-radius for consistent style
+      button.style.padding = '10px'; // Default padding
+
+      // Append the button to the content area
+      content.appendChild(button);
+
+      // Custom button click behavior
+      if (typeof options.btButton === 'function') {
+        button.addEventListener('click', options.btButton);
+      }
+    }
+
+    // Append content to wrapper and then to the sheet
+    contentWrapper.appendChild(content);
+    sheet.appendChild(header);
+    sheet.appendChild(contentWrapper);
+
+    // Append overlay and sheet to body
+    document.body.appendChild(overlay);
+    document.body.appendChild(sheet);
+
+    // Show the sheet
+    setTimeout(() => {
+      sheet.classList.add('show');
+    }, 100);
+
+    // Close on click outside (if allowed)
+    if (options.outsideTouch) {
+      overlay.addEventListener('click', function() {
+        btsheet.closed();  // Use the new global close method
+      });
+    }
+
+    // Close button behavior (trigger the onClose callback)
+    closeButton.addEventListener('click', function() {
+      if (typeof options.onClose === 'function') {
+        options.onClose(); // Call the onClose function when "X" is clicked
+      }
+      btsheet.closed();  // Use the new global close method
+    });
+  },
+
+  // Dedicated method to close the sheet externally
+  closed: function() {
+    const sheet = btsheet.sheet;
+    const overlay = btsheet.overlay;
+    
+    if (sheet && overlay) {
+      sheet.classList.remove('show');
+      setTimeout(() => {
+        document.body.removeChild(sheet);
+        document.body.removeChild(overlay);
+      }, 300);
+    }
+  }
+};
