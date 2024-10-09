@@ -60,13 +60,25 @@ const btsheet = {
       }
     }
 
-    // Create sheet header with close button
+    // Create sheet header
     const header = document.createElement('div');
     header.className = 'btsheet-sheet-header';
-    const closeButton = document.createElement('span');
-    closeButton.className = 'btsheet-close-btn';
-    closeButton.innerHTML = '&times;';
-    header.appendChild(closeButton);
+
+    // Check if btClose is enabled or not (true by default)
+    if (options.btClose !== false) {
+      const closeButton = document.createElement('span');
+      closeButton.className = 'btsheet-close-btn';
+      closeButton.innerHTML = '&times;';
+      header.appendChild(closeButton);
+
+      // Close button behavior (trigger the onClose callback)
+      closeButton.addEventListener('click', function () {
+        if (typeof options.onClose === 'function') {
+          options.onClose(); // Call the onClose function when "X" is clicked
+        }
+        btsheet.closed();  // Close the sheet
+      });
+    }
 
     // Create content wrapper (for content inside the sheet)
     const contentWrapper = document.createElement('div');
@@ -147,14 +159,6 @@ const btsheet = {
         btsheet.closed();
       });
     }
-
-    // Close button behavior (trigger the onClose callback)
-    closeButton.addEventListener('click', function () {
-      if (typeof options.onClose === 'function') {
-        options.onClose(); // Call the onClose function when "X" is clicked
-      }
-      btsheet.closed();  // Close the sheet
-    });
   },
 
   // Dedicated method to close the sheet externally
