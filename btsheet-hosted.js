@@ -4,14 +4,12 @@ const btsheet = {
 
   hosted: function (options = {}) {
     if (btsheet.isOpen) {
-      console.log("btsheet already Open, Let Close and Open again..");
       btsheet.closed();
       setTimeout(() => {
         btsheet.hosted(options);  // Reopen after closing
       }, 350);  // Wait for the sheet to close before reopening
       return;
     } else {
-      console.log("btsheet is not Open yet, Opening..");
     }
 
     // Create overlay dynamically
